@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistema de Aluguel - Protótipo</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <header>
+    <h1>Sistema de Aluguel - Protótipo</h1>
+    <div id="userArea">
+      <span id="welcome"></span>
+      <button id="logoutBtn" style="display:none">Logout</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="card" id="auth">
+      <h2>Login</h2>
+      <form id="loginForm">
+        <input type="text" id="l_cpf" placeholder="CPF" required />
+        <div class="actions">
+          <button type="submit">Login</button>
+        </div>
+      </form>
+      <div id="authMsg" class="msg"></div>
+    </section>
+
+    <section class="card" id="pedidoSection" style="display:none">
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <h2>Meus Pedidos</h2>
+        <div>
+          <label for="veiculoSelect" class="muted" style="margin-right:.5rem">Veículo</label>
+          <select id="veiculoSelect"></select>
+          <button id="createPedidoBtn" class="" style="margin-left:.5rem">Criar Pedido</button>
+        </div>
+      </div>
+      <div id="pedidoMsg" class="msg"></div>
+
+      <table id="pedidosTable">
+        <thead><tr><th>ID</th><th>Veículo</th><th>Data</th><th>Status</th><th>Parecer</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <small>Protótipo simples — chamadas para as APIs REST do backend.</small>
+  </footer>
+
+  <script src="/app.js"></script>
+</body>
+</html>
